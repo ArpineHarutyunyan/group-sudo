@@ -1,3 +1,6 @@
 #!/bin/bash
-mv /workspace/lessons/lessons1/output/u1/u2/a.txt /workspace/lessons/lessons1/output/u1/u3/a.txt
-mv /workspace/lessons/lessons1/output/u1/u2/b.txt /workspace/lessons/lessons1/output/u1/u3/b.txt
+cd ../output/U1
+rm -rf a.txt
+cd U2
+mv a.txt ../U3
+mv ../U2/b.txt ../U3
