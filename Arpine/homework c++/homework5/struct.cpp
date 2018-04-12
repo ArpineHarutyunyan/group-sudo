@@ -5,77 +5,52 @@ struct Person {
     std::string lastName;
     int age;
     std::string gender;
-    std::string status;
-    void foo () {
-        std::cout <<"Firstname:" << firstName << "\nLastname:" << lastName << "\nAge:" << age;
-        std::cout << "\nGender:" << gender << "\nStatus:" << status << "\n";;
-    }
+    bool status;
+    float weight;
+    std::string family;
+    std::string prefix;
 };
 
 int main()
 {
-    Person Arpine = {"Arpine", "Harutyunyan", 23, "female", "student"};
-    Person Armen = {"Armen", "Abrahamyan", 19, "male", "student"};
-    Person Lilit = {"Lilit", "Melqumyan", 19, "female", "student"};
-    Person Hrach = {"Hrach", "Gevorgyan", 21, "male", "student"};
-    Person Ani = {"Ani", "Hakobyan", 19, "female", "student"};
-    Person Artur = {"Artur", "Gasparyan", 25, "male", "student"};
-    Person Miqayel = {"Miqayel", "Sargsyan", 17, "male", "student"};
-    Person Nvard = {"Nvard", "Harutyunyan", 19, "female", "student"};
-    Person Tigran = {"Tigran", "Hovhannisyan", 20, "male", "student"};
-    Person Edgar = {"Edgar", "Grigoryan", 16, "male", "student"};
-    Person Mariam = {"Mariam", "Karapetyan", 21, "female", "student"};
-    Person Nona = {"Nona", "Musaelyan", 19, "female", "student"};
-    Person Aleksandr = {"Aleksandr", "Avagyan", 19, "male", "student"};
+    Person masiv[13];
+    masiv[0] = {"Arpine", "Harutyunyan", 23, "female", 1, 40, "unmarried", "Miss"};
+    masiv[1] = {"Armen", "Abrahamyan", 19, "male", 1, 70, "unmarried", "Mr"};
+    masiv[2] = {"Lilit", "Melqumyan", 19, "female", 1, 48.5, "unmarried", "Miss"};
+    masiv[3] = {"Hrach", "Gevorgyan", 21, "male", 1, 69.2, "unmarried", "Mr"};
+    masiv[4] = {"Ani", "Hakobyan", 19, "female", 1, 52, "unmarried", "Miss"};
+    masiv[5] = {"Artur", "Gasparyan", 25, "male", 1, 65, "unmarried", "Mr"};
+    masiv[6] = {"Miqayel", "Sargsyan", 17, "male", 1, 50, "unmarried", "Mr"};
+    masiv[7] = {"Nvard", "Harutyunyan", 19, "female", 1, 52, "unmarried", "Miss"};
+    masiv[8] = {"Tigran", "Hovhannisyan", 20, "male", 1, 75, "unmarried", "Mr"};
+    masiv[9] = {"Edgar", "Grigoryan", 16, "male", 1, 58, "unmaried", "Mr"};
+    masiv[10] = {"Mariam", "Karapetyan", 21, "female", 1, 53, "unmaried", "Miss"};
+    masiv[11] = {"Nona", "Musaelyan", 19, "female", 1, 53, "unmaried", "Miss"};
+    masiv[12] = {"Aleksandr", "Avagyan", 19, "male", 1, 62, "unmaried", "Mr"};
+    
     std::cout <<"Instigate mobile dasyntaci masnakicnery!\n";
     
-    std::cout << "Arpine\n" << "Armen\n" << "Lilit\n" << "Hrach\n";
-    std::cout << "Ani\n" << "Artur\n" << "Miqayel\n" << "Nvard\n";
-    std::cout << "Tigran\n" << "Edgar\n" << "Mariam\n" << "Nona\n" << "Aleksandr\n";
-    std::cout << std:: endl;;
+    for(int i = 0; i < 13; ++i) {
+        std::cout << masiv[i].firstName << "\n";
+    }
+
+    std::cout << std:: endl;
     std::cout <<"Greq ayn anuny um masin uzum eq avelin imanal:";
     std::string name;
     std::cin >> name;
     
-    if (name == "Arpine") {
-        Arpine.foo();
+    for(int i=0;i<13;i++) {
+            if(name== masiv[i].firstName) {
+                std::cout << masiv[i].prefix << " " << masiv[i].firstName << " " << masiv[i].lastName << "\n" << masiv[i].age << " old year";
+                std::cout << masiv[i].gender;
+                std::cout << "\n" << masiv[i].weight << " kg";
+                std::cout << "\n" << masiv[i].family;
+                if(masiv[i].status == true) {
+            std::cout << "\nStudent: Yes" << "\n";
+            } else {
+            std::cout << "\nStudent: No" << "\n";
+            }
+        }
     }
-    if (name == "Armen") {
-        Armen.foo();
-    }
-    if (name == "Lilit") {
-        Lilit.foo();
-    }
-    if(name == "Hrach") {
-        Hrach.foo();
-    }
-    if (name == "Ani") {
-        Ani.foo();
-    }
-    if (name == "Artur") {
-        Artur.foo();
-    }
-    if (name == "Miqayel") {
-        Miqayel.foo();
-    }
-    if (name == "Nvard") {
-        Nvard.foo();
-    }
-    if (name == "Tigran") {
-        Tigran.foo();
-    }
-    if (name == "Edgar") {
-        Edgar.foo();
-    }
-    if (name == "Mariam") {
-        Mariam.foo();
-    }
-    if (name == "Nona") {
-        Nona.foo();
-    }
-    if (name == "Aleksandr") {
-        Aleksandr.foo();
-    }
-    
     return 0;
 }
