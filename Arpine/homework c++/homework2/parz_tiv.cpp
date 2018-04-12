@@ -1,7 +1,7 @@
 #include <iostream>
-#include <math.h>
+
 bool parz(int n, int i = 2) {
-    if (i <= sqrt(n)) {
+    if (i <= n/2) {
         if (n % i != 0) {
             parz(n, ++i);
         } else {
