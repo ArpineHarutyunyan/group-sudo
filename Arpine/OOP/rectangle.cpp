@@ -1,31 +1,5 @@
 #include <iostream>
-
-class Point {
-        protected:
-                float x, y;
-        public:
-                Point(float x=0, float y=0)
-                        :x(x)
-                        ,y(y) {}
-                Point(const Point& P)
-                        :x(P.x)
-                        ,y(P.y)
-                {}
-                ~Point() {}
-        void set_X(float x) {
-            this->x = x;
-        }
-        float get_X() {
-            return x;
-        }
-        void set_Y(float y) {
-            this->y = y;
-        }
-        float get_Y() {
-            return y;
-        }
-
-};
+#include "point.cpp"
 
 class Rectangle: public Point {
     private:
@@ -39,43 +13,41 @@ class Rectangle: public Point {
         Rectangle(const Rectangle& r)
             :a(r.a) {}
         ~Rectangle() {}
-        void set_A(Point a) {
+        void setA(Point a) {
             this->a = a;
         }
-        Point get_A() {
+        Point getA() {
             return a;
         }
         float lenght() {
-            return a.get_X() - Point::get_X();
+            return a.getX() - Point::getX();
         }
         float hight() {
-            return a.get_Y() - Point::get_Y();
+            return a.getY() - Point::getY();
         }
-        float Rectangle_S() {
+        float RectangleS() {
             return lenght() * hight();
         }
-        float Rectangle_P() {
+        float RectangleP() {
             return 2 * (lenght() + hight());
         }
 };
 
 int main() {
+    float a, b, c, d;
     std::cout << "Input a : ";
-    float a;
     std::cin >> a;
     std::cout << "Input b : ";
-    float b;
     std::cin >> b;
     Point p(a, b);
     std::cout << "Input c : ";
-    float c;
     std::cin >> c;
     std::cout << "Input d : ";
-    float d;
     std::cin >> d;
     Point pp(c,d);
     Rectangle R(p,pp);
-    std::cout << "S = " << R.Rectangle_S() << std::endl;
-    std::cout << "P = " << R.Rectangle_P() << std::endl;
+    std::cout << "S = " << R.RectangleS() << std::endl;
+    std::cout << "P = " << R.RectangleP() << std::endl;
+
     return 0;
 }

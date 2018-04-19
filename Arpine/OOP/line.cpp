@@ -1,72 +1,51 @@
 #include <iostream>
-
-class Point {
-    protected:
-        double x, y;
-    public:
-        Point(double x = 0, double y = 0) {
-            this->x = x;
-            this->y = y;
-        }
-        ~Point() {}
-        double getX() {
-            return x;
-        }
-        double getY() {
-            return y;
-        }
-        void setX(double x) {
-            this->x = x;
-        }
-        void setY(double y) {
-            this->y = y;
-        }
-};
+#include "point.cpp"
+#include <cmath>
 
 class Line: public Point {
-    protected:
-        double x1, y1;
-    public:
-        Line(double x1 = 0, double y1 = 0)
-            :x1(x1)
-            ,y1(y1)
-        {
-            Point();
-        }
+    private:
+		Point a;
+   	public:
+        Line(Point a, Point b)
+			:Point(b) {
+			this->a = a;
+		}
         ~Line() {}
-        double getX1() {
-            return x1;
+        void setA() {
+            this->a = a;
         }
-        double getY1() {
-            return y1;
+        Point getA() {
+            return a;
         }
-        void setX1(double x1) {
-            this->x1 = x1;
-        }
-        void setY1(double y1) {
-            this->y1 = y1;
-        }
-        float print_cord (double x1, double y1) {
-            double k;
-            k = (y1 - y) / (x1 - x);
-
-            for (int i = x + 1; i < x1; ++i) {
-                std::cout << "x = " << i << " " << "y = " << k * (i - x) + y << "\n";
-            }
-            std::cout << "\n"; 
-
-        }
+        float lineL() {
+			return sqrt(pow(a.getX() - Point::getX(), 2) + pow(a.getY() - Point::getY(), 2));
+        	}
+		void foo() {
+		    float k = (a.getY() - Point::getY()) / (a.getX() - Point::getX());
+		    float b = (Point::getY() - Point::getX()) * k;
+		    for (int x = Point::getX(); x < a.getX(); ++x) {
+				std::cout << "x = " << x << " ";
+				std::cout << "y = " << k * x + b << std::endl;
+	        }
+		}
 };
 
 int main() {
-    Line a;
-    double x1, y1;
-    std::cout << "Enter x1:";
-    std::cin >> x1;
-    std::cout << "Enter y1:";
-    std::cin >> y1;
-
-    a.print_cord(x1, y1);
+   int a, b, c, d;
+	std::cout << "Input a : ";
+	std::cin >> a;
+	std::cout << "Input b : ";
+	std::cin >> b;
+    std::cout << "Input c : ";
+    std::cin >> c;
+    std::cout << "Input d : ";
+    std::cin >> d;
+	Point p(a, b);
+	Point pp(c, d);
+	Line L(p, pp);
+	std::cout << "Line L = " << L.lineL() << std::endl;
+	std::cout << '\n';
+	L.foo();
 
     return 0;
 }

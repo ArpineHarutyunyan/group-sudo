@@ -1,72 +1,50 @@
 #include <iostream>
+#include "point.cpp"
 #include <cmath>
 
-class Point {
-    protected:
-        float x, y;
-    public:
-        Point() {
-            x = 0;
-            y = 0;
-        }
-        ~Point() {}
-        float getX() const {
-            return x;
-        }
-        float getY() const {
-            return y;
-        }
-        void setX(float x) {
-            this->x = x;
-        }
-        void setY(float y) {
-            this->y = y;
-        }
-
-        void foo() { std::cout << "POINT\n"; }
-};
-
 class Circle: public Point {
-    private:
-        unsigned int r;
-    public:
-        Circle() {
-            r = 0;
-        }   
-        
-        ~Circle() {}
-
-        unsigned int getR() {
-            return r;
-        }
-        void setR(unsigned int r) {
-            this->r = r;
-        }
-        
-        float getL(unsigned int r) { 
-            float l = 2 * M_PI * r;
-            return l;
-        }
-        float getS(unsigned int r) {
-            float s = M_PI * r *r;
-            return s;
-        }
-
-        unsigned int operator* (int k) {
-            r = r * k;
-        }
-
-        void foo() { std::cout << "POINT\n"; }
+    	private:
+        	Point r;
+    	public:
+	      	Circle(Point a, Point r) 
+			:Point(a) 
+		{
+			this->r = r;
+		}
+        	~Circle() {}
+        	void setR(Point r) {
+            		this->r = r;
+        	}
+        	Point getR() {
+            		return r;
+        	}
+		float R() {
+			return sqrt(pow(r.getX() - Point::getX(), 2) + pow(r.getY() - Point::getY(), 2));
+		}
+		float getL() {
+            		return 2 * M_PI * R();
+        	}
+        	float getS() {
+            		return M_PI * R() * R();
+        	}
 };
 
 int main() {
-    Circle a;
-    Point* p = &a;
-    p->foo();
-    
-    std::cout << "L = " << a.getL(10) << std::endl;
-    std::cout << "S = " << a.getS(5) << std::endl;
-    std::cout << "R = " << a*3 << std::endl;
+	int a, b, c, d;
+	std::cout << "Input a : ";
+	std::cin >> a;
+	std::cout << "Input b : ";
+	std::cin >> b;
+	std::cout << "Input c : ";
+	std::cin >> c;
+	std::cout << "Input d : ";
+	std::cin >> d;
+	Point p(a, b);
+	Point pp(c, d);
+	Circle C(p, pp);
+	std::cout << "Circle L = " << C.getL() << std::endl;
+	std::cout << "Circle S = " << C.getS() << std::endl;
+	std::cout << '\n';
 
     return 0;
 }
