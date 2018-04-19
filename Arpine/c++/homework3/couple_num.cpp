@@ -9,8 +9,8 @@ int main() {
     std::cin >> last_num;
     
     if (first_num > last_num) {
-        std::cout << "Error!\n";
-    } else {
+        std::cout << "Error!";
+    }
     int sum = 0;
     for(int num = first_num; num <= last_num; num++) {
         if(num % 2 == 1) {
@@ -19,6 +19,5 @@ int main() {
         sum += num;
     }
     std::cout << "SUM couple numbers:" << sum << "\n";
-    }
     return 0;
 }

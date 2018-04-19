@@ -9,9 +9,7 @@ class Point {
             x = 0;
             y = 0;
         }
-        ~Point() {
-            std::cout << "Point Des!\n";
-        }
+        ~Point() {}
         float getX() const {
             return x;
         }
@@ -36,10 +34,7 @@ class Circle: public Point {
             r = 0;
         }   
         
-        ~Circle()
-        {
-            std::cout << "Circle Des!" << std::endl; 
-        }
+        ~Circle() {}
 
         unsigned int getR() {
             return r;
@@ -63,3 +58,15 @@ class Circle: public Point {
 
         void foo() { std::cout << "POINT\n"; }
 };
+
+int main() {
+    Circle a;
+    Point* p = &a;
+    p->foo();
+    
+    std::cout << "L = " << a.getL(10) << std::endl;
+    std::cout << "S = " << a.getS(5) << std::endl;
+    std::cout << "R = " << a*3 << std::endl;
+
+    return 0;
+}
