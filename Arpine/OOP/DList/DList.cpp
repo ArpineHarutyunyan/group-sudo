@@ -13,8 +13,6 @@ List::List(const List& list)
      ,_size(list._size)
 {
     Node* tmp = list._tail;
-    //   std::cout << "tail " << list._tail <<std::endl;
-    //   std::cout << "head " << list._head <<std::endl;
     Node* next = NULL;
     while(tmp) {
         _head = new Node(tmp->_value);
@@ -30,7 +28,6 @@ List::~List()
     while(_head) {
         if(_head->_prev)
             delete _head->_prev;
-        //        std::cout << "deleting " << _head->_prev << std::endl;
         _head = _head->_next;
     }
     _size = 0;
@@ -39,7 +36,6 @@ List::~List()
 
 int& List::operator[](unsigned int index) 
 {
-    //std::cout << "operator = " << index << std::endl;
     static int tmp = -1;
     if (_size == 0 || _size<index) {
         std::cout << "Error: out of range: index " << index << std::endl;
@@ -52,7 +48,6 @@ int& List::operator[](unsigned int index)
     } else {
         item = (Node*) findNodeFromStart(index);
     }
-    // item can't be NULL
     return item->_value;
 } 
 
@@ -74,18 +69,25 @@ int List::find(int value)
     return -1;
 }
 
-void List::insert(int value, unsigned int index = 0)
-{
-    //TODO:
-   /*if(index > _size) {
-        std::cout << "Warning: Out of range index: " << index << " ";
-    index = _size;
-}
-    Node* node = new Node();
-    node->value = value;
-    Node* tmp = shiftTo(index);
-    node->next = tmp->next;
-    node->next = tmp;*/
+void List::insert(int value, unsigned int index = 0) {
+   if(index <= _size){
+        if(index == 0) {
+            pushFront(value);
+            return;
+        } else if (index == _size) {
+            pushEnd(value);
+            return;
+        }
+        Node* tmp = NULL;
+        if (index > _size/2) {
+            tmp = (Node*) findNodeFromEnd(_size-index-1);
+        } else {
+            tmp = (Node*) findNodeFromStart(index);
+        }
+        ++_size;
+    } else {
+        std::cout << "Warning!\n";
+    }
 }
 
 void List::pushFront(int value)
@@ -100,8 +102,6 @@ void List::pushFront(int value)
     }
     _head = n;
     ++_size;
-    //   std::cout << "head " << _head << std::endl;
-    //   std::cout << "tail " << _tail << std::endl;
 }
 
 void List::pushEnd(int value)
@@ -118,9 +118,35 @@ void List::pushEnd(int value)
     ++_size;
 }
 
-int List::remove(unsigned int)
-{
-    //TODO:
+int List::remove(unsigned int index) {
+    if (index < _size) {
+        if (index == 0) {
+            Node* tmp = _head;
+            int value = _head->_value;
+            _head = _head->_next;
+            delete tmp;
+            --_size;
+            return value;
+        }
+        if (index == _size) {
+            Node* tmp = _tail;
+            _tail = _tail->_prev;
+            int value = _tail->_value;
+            delete tmp;
+            --_size;
+            return value;
+        }
+	int value = _tail->_value;
+        Node* tmp = NULL;
+        if (index > _size/2) {
+            tmp = (Node*) findNodeFromEnd(_size-index-1);
+        } else {
+            tmp = (Node*) findNodeFromStart(index);
+        }
+        delete tmp;
+	--_size;
+	return value;
+    }
 }
 
 int List::popFront()
@@ -130,7 +156,6 @@ int List::popFront()
         Node* tmp = _head;
         _head = _head->_next;
         _head ? _head->_prev = NULL : NULL;
-        //        std::cout << "front head -> " <<_head <<std::endl;
         delete tmp;
         --_size;
         return value;
@@ -145,7 +170,6 @@ int List::popEnd()
         Node* tmp = _tail;
         _tail = _tail->_prev;
         _tail ? _tail->_next = NULL : NULL;
-        //        std::cout << "end head -> " <<_tail <<std::endl;
         delete tmp;
         --_size;
         return value;
@@ -172,7 +196,6 @@ void List::print()
 
 void* List::findNodeFromEnd(unsigned int index)
 {
-    // index is small from _size
     Node* tmp = _tail;
     //std::cout << "-------------===============" << index << std::endl;
     if (index > 0) {
