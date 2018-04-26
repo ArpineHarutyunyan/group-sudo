@@ -1,7 +1,6 @@
 #ifndef LIST
 #define LIST
 
-
 class List {
     private:
         struct Node {
@@ -18,7 +17,6 @@ class List {
         Node* _head;
         Node* _tail;
         unsigned int _size;
-        //void* shiftTo(unsigned int);
         void* findNodeFromStart(unsigned int index);
         void* findNodeFromEnd(unsigned int index);
     public:
@@ -35,6 +33,6 @@ class List {
         int popEnd();
         int size();
         void print();
-}; //List
+};
 
-#endif  //LIST
+#endif
