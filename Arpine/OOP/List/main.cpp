@@ -1,5 +1,6 @@
 #include <iostream>
 #include "list.h"
+//jjjj
 
 int main() {
 	List list;
