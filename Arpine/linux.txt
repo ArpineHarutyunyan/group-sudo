@@ -1,0 +1,74 @@
+Առաջադրանք 1
+
+free -h
+sudo dd if=/dev/sda6 of=/media/swapfile.img bs=1024 count=1M
+sudo chmod 600 /media/swapfile.img
+sudo mkswap /media/swapfile.img
+sudo vim /etc/fstab
+Added - /media/swapfile.img swap swap sw 0 0
+sudo swapon /media/swapfile.img
+
+Առաջադրանք 2
+
+vim /var/tmp/script.sh
+chmod +x /var/tmp/script.sh
+sudo vim /etc/systemd/system/sample.service
+
+[Unit]
+Description=Description for sample script goes here
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/var/tmp/script.sh
+TimeoutStartSec=0
+
+[Install]
+WantedBy=default.target
+
+systemctl daemon-reload
+systemctl enable sample.service
+systemctl start sample.service
+systemctl reboot
+
+Առաջադրանք 3
+
+1․ Ստուգում եմ run level-ը՝ who -r
+2. Փոխում եմ run level-ը՝ init 3, resatart` init 6
+3. Run level-ը default կարող ենք փոխել այս ֆայլում՝ vim /etc/init/rc-sysinit.conf
+
+Առաջադրանք 4
+
+grep  'text' -r | sort >> file.txt
+
+Առաջադրանք 5
+
+1․ Ստեղծում եմ 3 user
+sudo useradd User1
+sudo useradd User2
+sudo useradd User3
+2․ Ստեղծում եմ 3 group
+sudo groupadd Group1
+sudo groupadd Group2
+sudo groupadd Group3
+3. User-ներին ավելացնում եմ համապատասխան group-ների մեջ
+sudo usermod -a -G Group1 User1
+sudo usermod -a -G Group1 User2
+sudo usermod -a -G Group2 User2
+sudo usermod -a -G Group2 User3
+sudo usermod -a -G Group3 User1
+sudo usermod -a -G Group3 User2
+sudo usermod -a -G Group3 User3
+4․ User1-ին տալիս եմ sudo հնարավորություն
+sudo visudo
+5․ Ստեղծում եմ 2 folder
+mkdir folder1
+mkdir folder2
+6. Փոխում եմ folder1-ի և folder2 օգտագործողներին
+sudo chown User3:Group1 folder1
+sudo chown User1:Group2 folder2
+7․ Փոխում եմ folder1-ի և folder2 permission-ները
+sudo chmod 470 folder1
+sudo chmod 560 folder2
+
+
