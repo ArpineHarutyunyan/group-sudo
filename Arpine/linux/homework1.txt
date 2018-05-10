@@ -70,5 +70,3 @@ sudo chown User1:Group2 folder2
 7․ Փոխում եմ folder1-ի և folder2 permission-ները
 sudo chmod 470 folder1
 sudo chmod 560 folder2
-
-
