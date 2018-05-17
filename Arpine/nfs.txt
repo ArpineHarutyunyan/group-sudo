@@ -1,0 +1,12 @@
+1. Create two directories with some files. Use nfs to share one of them as read only, the other
+must be writable. Have your neighbour connect to them to test.
+	sudo apt-get install nfs-kernel-server nfs-common
+	sudo nano /etc/exports ... /home/student/Desktop/linux *(rw)
+	sudo /etc/init.d/nfs-kernel-server restart
+	sudo mount -t nfs 192.168.1.2:/home/student/Desktop/linux /media
+
+2. Investigate the user owner of the files created by your neighbour.
+	ls -al/username
+
+3. Protect a share by ip-address or hostname, so only your neighbour can connect.
+	/home/student/Desktop/linux 192.168.0.55(rw)
