@@ -1,0 +1,8 @@
+1. Install bind9 and verify with a sniffer how it works.
+	sudo apt install bind9
+	sudo tcpdump udp port 53
+	nslookup google.com
+
+4. Use dig and nslookup to verify your NS and A records.
+	dig google.com
+	nslookup google.com
