@@ -6,7 +6,7 @@ body {
 /****************************************************/
 
 .main {
-    background: url(image.jpg) no-repeat;
+    background: url(img/image.jpg) no-repeat;
     height: 100vh;
     background-size: cover;
 }
@@ -27,196 +27,65 @@ body {
     transform: translate(-50%, -50%);
 }
 
+
 .content12 {
     height: 100vh;
 }
 
-.content1 {
-    position: absolute;
-    top: 100%;
-    width: 100%;
-    height: 34%;
-    background: gainsboro;
+.users {
+    background-color: gainsboro;
 }
 
-.round1 {
-    display: inline;
-    position: absolute;
-    width: 10%;
-    height: 60%;
-    left: 20%;
-    top: 15%;
-    border-radius: 100px;
-    border: 2px solid blue;
-    background: white;
+.number {
+    display: inline-block;
+    margin: 40px 0;
 }
 
-.round1 p {
-    margin: 20%;
-    font-size: 40px;
+.number:not(:last-child) {
+    margin-right: 150px;
+}
+
+.center {
+    margin-left: calc(50% - 450px);
+}
+.round {
+    float: right;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 3px solid blue;
+    font-size: 65px;
     color: blue;
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    margin-bottom: 20px;
 }
 
-.round11 {
+.round p {
     position: absolute;
-    left: 22%;
-    top: 70%;
+    left: 50%;
+    top: 25%;
+    transform: translate(-50%, -50%);
+}
+
+.user1 {
+    font-size: 30px;
     color: blue;
+    text-align: center;
 }
 
-.round2 {
-    position: absolute;
-    width: 10%;
-    height: 60%;
-    left: 43%;
-    top: 15%;
-    border-radius: 100px;
-    border: 2px solid blue;
-    background: white;
-}
-
-.round2 p {
-    margin: 20%;
-    font-size: 40px;
-    color: blue;
-}
-
-.round22 {
-    position: absolute;
-    left: 44%;
-    top: 70%;
-    color: blue;
-}
-
-.round3 {
-    position: absolute;
-    width: 10%;
-    height: 60%;
-    left: 67%;
-    top: 15%;
-    border-radius: 100px;
-    border: 2px solid blue;
-    background: white;
-}
-
-.round3 p {
-    margin: 20%;
-    font-size: 40px;
-    color: blue;
-}
-
-.round33 {
-    position: absolute;
-    left: 68%;
-    top: 70%;
-    color: blue;
-}
-
-.content2 {
-    position: absolute;
-    top: 134%;
-    width: 100%;
-    height: 66%;
-    background: white;
-}
-
-p {
-    width: 12px;
-}
-
-.photos1 {
-    position: absolute;
-    width: 100%;
-    height: 33%;
-    //background: rebeccapurple
-}
-
-.photo1 {
-    display: inline;
-    position: absolute;
-    width: 10%;
-    height: 100%;
-    left: 10%;
-    top: 15%;
-    border-radius: 100px;
+.photos img {
+    width: 111px;
     border: 2px solid orange;
-    background: white;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 30px 100px 0 100px;
 }
 
-.photo2 {
-    position: absolute;
-    width: 10%;
-    height: 100%;
-    left: 33%;
-    top: 15%;
-    border-radius: 100px;
-    border: 2px solid orange;
-    background: white;
-}
-
-.photo3 {
-    position: absolute;
-    width: 10%;
-    height: 100%;
-    left: 57%;
-    top: 15%;
-    border-radius: 100px;
-    border: 2px solid orange;
-    background: white;
-}
-
-.photo4 {
-    position: absolute;
-    width: 10%;
-    height: 100%;
-    left: 77%;
-    top: 15%;
-    border-radius: 100px;
-    border: 2px solid orange;
-    background: white;
-}
-
-
-.photos2 {
-    position: absolute;
-    top: 33%;
-    width: 100%;
-    height: 33%;
-    //background: blue;
-}
-
-.photo5 {
-    display: inline;
-    position: absolute;
-    width: 10%;
-    height: 100%;
-    left: 20%;
-    top: 15%;
-    border-radius: 100px;
-    border: 2px solid orange;
-    background: white;
-}
-
-.photo6 {
-    position: absolute;
-    width: 10%;
-    height: 100%;
-    left: 43%;
-    top: 15%;
-    border-radius: 100px;
-    border: 2px solid orange;
-    background: white;
-}
-
-.photo7 {
-    position: absolute;
-    width: 10%;
-    height: 100%;
-    left: 67%;
-    top: 15%;
-    border-radius: 100px;
-    border: 2px solid orange;
-    background: white;
+.photos1, .photos2 {
+    text-align: center;
 }
 
 /****************************************************/
