@@ -203,12 +203,72 @@ p {
 	align-items: center;
 	flex-wrap: wrap;
 	justify-content: space-around;
+	flex-direction: row;
+}
+.column {
+	display: flex;
 	flex-direction: column;
-	width: 20%;
-
+	align-items: center;
+	width: 25%;
+	border: 1px solid grey;
+	margin-top: 5%;
 }
 .column img {
 	width: 70px;
 	height: 70px;
 	border-radius: 100px;
+}
+.column p {
+	text-align: center;
+}
+.last-page {
+	width: 100vw;
+	height: 100vh;
+	background: url(images/fon2.jpg);
+	background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+}
+.last-head, .last-head p {
+    text-align: center;
+    color: white;
+}
+.transparent-bckg1 {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: inherit;
+    height: inherit;
+}
+.last-main p, .footer p{
+	color: black;
+	display: inline-block;
+}
+.last-main {
+	background-color: white;
+	height: 50%;
+	width: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	align-content: flex-start;
+	margin-left: 20%;
+	margin-top: 5%;
+	flex-direction: column;
+}
+.footer {
+	width: inherit;
+	height: 10vh;
+	background-color: grey;
+	margin-top: 10%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.input {
+	display: flex;
+	flex-direction: column;
+}
+.together {
+	display: flex;
+	
 }
