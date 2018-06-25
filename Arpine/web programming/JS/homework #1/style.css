@@ -2,7 +2,7 @@
     padding: 50px 30px;
 }
 
-.modalclass {
+.loginCont {
     display: flex;
     flex-direction: column;
 }
@@ -35,17 +35,12 @@
     justify-content: flex-end;
 }
 
-.last-head2 {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .last-main {
+    margin: 5% auto;
     width: 40%;
     height: 50%;
     padding: 20px;
+    background-color: aliceblue;
 }
 
 input[type=text],
@@ -71,4 +66,27 @@ input[type=number],
 .button-form {
     display: flex;
     justify-content: flex-end;
+}
+
+.resultContainer {
+    width: 80%;
+    margin: 0 auto;
+    background-color: lightslategray;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.result {
+    width: calc(100%/3);
+    padding: 10px 10px;
+}
+
+.resultBox {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.resultBox {
+    background-color: white;
+    border-radius: 5px;
 }
