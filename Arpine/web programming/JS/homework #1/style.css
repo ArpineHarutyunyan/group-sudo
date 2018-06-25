@@ -1,0 +1,30 @@
+.formbox {
+    padding: 50px 30px;
+}
+
+.modalclass {
+    display: flex;
+    flex-direction: column;
+}
+
+.inputName {
+    width: 100%;
+}
+
+.header {
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #ab9595;
+    display: flex;
+    justify-content: center;
+}
+
+.header div {
+    display: flex;
+}
+
+.header div h3 {
+    padding: 3px 10px;
+}
