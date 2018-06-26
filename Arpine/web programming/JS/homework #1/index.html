@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="media-queries.css" />
+    <script type="text/javascript" src="javascript/jquery.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
+    <script type="text/javascript" src="javascript/script.js" async></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="modal fade" data-backdrop="static" data-keyboard="false" id="modalForm">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Form</h4>
+                    </div>
+
+                    <div class="formbox">
+
+                        <form id="formLogin" class="modalclass" action="#">
+                            <div class="container loginCont">
+                                <label for="uname"><b>Name</b></label>
+                                <input type="text" placeholder="Enter name" class="inputName" id="name" required>
+                                <label for="lname"><b>Last name</b></label>
+                                <input type="text" placeholder="Enter last name" class="inputName" id="lname" required>
+                                <div class="gender">
+                                    <div class="radio-btn-group">
+                                        <div class="radio">
+                                            <input id="male" type="radio" name="radio" value="click_me" id="click_me" />
+                                            <label>Male</label>
+                                        </div>
+                                        <div class="radio">
+                                            <input id="female" type="radio" name="radio" value="or_me" id="or_me" />
+                                            <label>Female</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sumbitBtn">
+                                    <button type="submit" class="btn btn-info" id="submit">Submit</button>
+                                </div>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header">
+        <div>
+            <p id="checkGender"></p>
+            <p id="hname"></p>
+            <p id="hlname"></p>
+        </div>
+    </div>
+
+    <div id="second_page">
+            <div class="container">
+            	<div class="modal-header">
+                <h4 class="modal-title">Form</h4>
+            </div>
+                <form id="form_data">
+                	<div class="name-form">
+                	<div>
+                		<label>Name</label>
+                    	<input class="divimput" name="name"     placeholder="Name" />
+                	</div>
+                	<div>
+                		<label>Surname</label>
+                    	<input class="divimput" name="surname"  placeholder="Surname" />
+                	</div>
+                	<div>
+                		<label>Address</label>
+                    	<input class="divimput" name="adress"     placeholder="Adress" />
+                	</div>
+                </div>
+                <div class="name-form">
+                	<div>
+                		<label>Country</label>
+                    	<input class="divimput" name="country"     placeholder="Country" />
+                	</div>
+                	<div>
+                		<label>Phone</label>
+                    	<input class="divimput" name="phone" type="number" placeholder="Phone" />
+                	</div>
+                	<div>
+                    	<label>E-Mail</label>
+                    	<input class="divimput" name="email" type="email"  placeholder="E-mail" />
+                	</div>
+                </div>
+                <div class="divbutton">
+                    	<input id="button-data" class="btn btn-info" type="button" value="Submit" onclick="info_cart (this.form)" />
+                    </div>
+                </form> 
+            </div>
+        </div>
+        <div id="container_cart"></div>
+
+</body>
+
+</html>
