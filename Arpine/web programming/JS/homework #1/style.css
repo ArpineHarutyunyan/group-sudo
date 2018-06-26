@@ -26,8 +26,9 @@
     display: flex;
 }
 
-.header div h3 {
+.header div p {
     padding: 3px 10px;
+    font-size: 30px;
 }
 
 .sumbitBtn {
@@ -80,13 +81,6 @@ input[type=number],
     width: calc(100%/3);
     padding: 10px 10px;
 }
-
-.resultBox {
-    width: 50%;
-    margin: 0 auto;
-}
-
-.resultBox {
-    background-color: white;
-    border-radius: 5px;
+.table {
+	background-color: white;
 }
