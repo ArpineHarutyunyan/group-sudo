@@ -10,7 +10,7 @@
     background-color: #0000006c;
 }
 
-.logo span {
+.train span {
     width: 116px;
     height: 26px;
     color: #ffc100;
@@ -20,21 +20,21 @@
     line-height: 65.06px;
 }
 
-.logo span {
+.train span {
     font-weight: 600;
 }
 
-.logo span span {
+.train span span {
     color: #ffffff;
     font-family: "Source Sans Pro";
     font-weight: 300;
 }
 
-.top-text-1 {
+.center-text1 {
     margin: 10% 0;
 }
 
-.top-text-1 span {
+.center-text1 span {
     color: #f5efec;
     font-family: Roboto;
     font-size: 6vmax;
@@ -43,11 +43,11 @@
     text-transform: uppercase;
 }
 
-.top-text-1 span span {
+.center-text1 span span {
     color: #ffc100;
 }
 
-.top-text-2 p {
+.center-text2 p {
     color: #ffffff;
     font-family: "Source Sans Pro";
     font-size: 20px;
@@ -151,12 +151,47 @@
     text-transform: uppercase;
 }
 
-.our-coaches-bg {
-    background: url(images/choache.png) no-repeat;
+.our-coaches-bg1 {
+    background: url(images/choache1.jpg) no-repeat;
+    background-size: cover;
+    height: 248px;
+}
+.our-coaches-bg2 {
+    background: url(images/choache2.jpg) no-repeat;
+    background-size: cover;
+    height: 248px;
+}
+.our-coaches-bg3 {
+    background: url(images/choache5.jpg) no-repeat;
+    background-size: cover;
+    height: 248px;
+}
+.our-coaches-bg4 {
+    background: url(images/choache4.png) no-repeat;
+    background-size: cover;
+    height: 248px;
+}
+.our-coaches-bg5 {
+    background: url(images/choache5.jpg) no-repeat;
+    background-size: cover;
+    height: 248px;
+}
+.our-coaches-bg6 {
+    background: url(images/choache6.jpg) no-repeat;
+    background-size: cover;
+    height: 248px;
+}
+.our-coaches-bg7 {
+    background: url(images/choache7.jpg) no-repeat;
     background-size: cover;
     height: 248px;
 }
 
+.our-coaches-bg8 {
+    background: url(images/choache8.jpg) no-repeat;
+    background-size: cover;
+    height: 248px;
+}
 .our-coaches-bg:hover .our-coaches-hover {
     opacity: 1;
     cursor: pointer;
@@ -173,7 +208,6 @@
     transition: 1s;
 }
 
-padding: 100px 0;
 .our-coaches-hover p {
     color: #ffc100;
     font-family: Roboto;
@@ -183,10 +217,153 @@ padding: 100px 0;
     text-transform: uppercase;
 }
 
+.testimonial {
+    background: url(../image/bg-2.png);
+    background-size: cover;
+    background-color: #1496d2;
+}
 
-/* 
-.how-it-works,
-.top,
-.why-choose-us, .our-coaches {
-    display: none;
-} */
+.testimonial-people h1 {
+    color: #ffffff;
+    font-family: Roboto;
+    font-size: 30px;
+    font-weight: 300;
+    line-height: 24.16px;
+    text-transform: uppercase;
+}
+
+.people-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.people-img img {
+    border-radius: 50%;
+    height: 100px;
+}
+
+.people-text {
+    box-shadow: -5px 0 3px -5px #fff3ee;
+    opacity: 0.6;
+}
+
+.people-text h1 {
+    color: #ffffff;
+    font-family: Roboto;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 24.16px;
+}
+
+.people-text p {
+    color: #ffffff;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24.16px;
+}
+
+.gym-images {
+    background-color: white;
+}
+
+.gym-text h1 {
+    color: #1496d2;
+    font-family: Roboto;
+    font-size: 42px;
+    font-weight: 300;
+    line-height: 24.16px;
+    text-transform: uppercase;
+}
+
+.gym-img img {
+    vertical-align: text-top;
+}
+
+.counters {
+    background-color: #3a3938;
+}
+
+.counter-row {
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+}
+
+.circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 115px;
+    height: 115px;
+    border-radius: 50%;
+    border: 4px solid rgba(255, 255, 255, 0.2);
+}
+
+.circle p {
+    margin: 0px;
+    color: #ffffff;
+    font-family: Roboto;
+    font-size: 3vmax;
+    font-weight: 400;
+    line-height: 49.86px;
+}
+
+.padding-box {
+    display: flex;
+    flex-direction: row;
+    background-color: #363535;
+    padding: 15px;
+    margin: 5px;
+}
+
+.padding-box>p {
+    width: 50%;
+    margin: 25px 0px;
+    text-align: center;
+    color: #ffffff;
+    font-family: Roboto;
+    font-size: 2vmax;
+    font-weight: 300;
+    line-height: 34px;
+    text-transform: uppercase;
+}
+
+
+/* Footer */
+
+.footer-text-1 {
+    color: #ffffff;
+    font-family: "Source Sans Pro";
+    font-size: 35px;
+    font-weight: 300;
+    line-height: 65.06px;
+}
+
+.footer-text-1 span {
+    color: #ffc100;
+    font-family: "Source Sans Pro - Semibold";
+    font-weight: 400;
+}
+
+.footer-rec {
+    width: 134px;
+    height: 2px;
+    background-color: #565656;
+}
+
+.footer-list {
+    display: flex;
+    justify-content: center;
+}
+
+.footer-list a {
+    color: #ffffff;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 30px;
+    text-decoration: none;
+    margin: 0 10px;
+}
