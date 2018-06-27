@@ -1,175 +1,192 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto');
-body {
-	font-family: 'Roboto', sans-serif;
-}
-
-/**********************************************/
-
 .top {
-	background-image: url(images/bg.jpg);
-	background-repeat: no-repeat;
-	background-position: top left;
-	background-size: cover;
-}
-.transparent-bckg {
-	background-color: rgba(0,0,0,0.6);
-	height: 100%;
-}
-.header {
-	padding:30px;
-	width: 70vw;
-	margin: 0 auto;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-}
-.logo {
-	font-size: 35px;
-	color: #ffffff;
-} 
-.train-me {
-	display: inline-block;
-	color: #e9c24a;
-	font-weight: bold;
-}
-.login, .sign-up {
-	padding: 10px 20px;
-	margin: 0 10px;
-	color: #ffffff;
-	font-size: 16px;	
-	display: inline-block;
-}
-.sign-up {
-	border: 1px solid #ffffff;
-}
-.top-content {
-	margin: 0 auto;
-	text-align: center;
-	width: 50vw;
-	min-width: 700px;
-}
-.top-content p {
-	margin: 200px 0;
-	font-size: 86px;
-	color: #ffffff;
-	text-transform: uppercase;
-}
-.top-content span {
-	color: #e9c24a;
-	font-weight: bold;
-}
-.arrow {
-	margin: 0 auto;
-	width: 25vw;
-	min-width: 200px;
-	text-align: center;
-	margin: 0 auto;
-	font-size: 20px;
-	color: #ffffff;
-}
-.arrow-text{
-	margin: 0 auto;
-	font-size: 20px;
-	color: #ffffff;
-}
-.arrow-icon {
-	padding: 5px;
-	width: 80px;
-	margin: 20px auto 100px auto;
-	text-align: center;
-	border: 1px solid #ffffff;
-	border-radius: 30px;
-}
-.fa.fa-angle-double-down {
-	font-size: 35px;
-	color: #ffffff;
+    height: 100vh;
+    background: url(images/bg.jpg) no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
-/**********************************************/
+.transparent {
+    height: 100vh;
+    background-color: #0000006c;
+}
+
+.logo span {
+    width: 116px;
+    height: 26px;
+    color: #ffc100;
+    font-family: "Source Sans Pro - Semibold";
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 65.06px;
+}
+
+.logo span {
+    font-weight: 600;
+}
+
+.logo span span {
+    color: #ffffff;
+    font-family: "Source Sans Pro";
+    font-weight: 300;
+}
+
+.top-text-1 {
+    margin: 10% 0;
+}
+
+.top-text-1 span {
+    color: #f5efec;
+    font-family: Roboto;
+    font-size: 6vmax;
+    font-weight: 700;
+    line-height: 78px;
+    text-transform: uppercase;
+}
+
+.top-text-1 span span {
+    color: #ffc100;
+}
+
+.top-text-2 p {
+    color: #ffffff;
+    font-family: "Source Sans Pro";
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+.arrow {
+    width: 72px;
+    height: 52px;
+    border-radius: 26px;
+    background-color: #f5efec;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.shape {
+    width: 24px;
+    height: 24px;
+    border: 1px solid #ffffff;
+    background-color: #f5efec;
+}
 
 .how-it-works {
-	padding: 70px 0;
-	width: 70vw;
-	margin: 0 auto
-}
-.head-second-page {
-	font-size: 42px;
-	line-height: 24px;
-	color: rgb(20,150,210);
-	font-weight: 300;
-	text-align: left;
-	text-transform: uppercase;
-}
-.container-rectangles {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-}
-.rectangle {
-	width: 256px;
-}
-.figure1, .figure2, .figure3  {
-	width: 322px;
-	height: 290px;
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover;
-	position: relative;
-}
-.figure1 {background-image: url(images/trainer.jpg);}
-.figure2 {background-image: url(images/girl.jpg);}
-.figure3 {background-image: url(images/boy.jpg);}
-.rectangle-black {
-	width: 260px;
-	background-color: #353331;
-	position: absolute;
-	bottom: 20px;
-	right: 0;
-	text-align: center;
-}
-.rectangle-black p {
-	font-size: 16px;
-	text-transform: uppercase;
-	line-height: 27px;
-	color: rgb(255,255,255);
-	font-family: "Source Sans Pro";
-	text-align: center;
-}
-.how-it-works span {
-	font-size: 30px;
-	line-height: 36px;
-	color: rgb(53,52,50);
-	font-weight: 300;
-}
-.rectangle-text p {
-	display: inline;
-	color: rgb(75,75,75);
-	font-size: 14px;
-	line-height: 30px;
-}
-.rectangle-text {
-	box-sizing: border-box;
-	width: 322px;
-	height: 265px;
-	padding: 15px;
-	background-color: rgba(255,255,255,0.2);
-	border: 1px solid rgba(53,52,50,0.3);
+    background-color: #f5f5f5;
+    padding: 100px 0;
 }
 
-/**********************************************/
-.container-choose {
-	width: 70vw;
-	margin: 0 auto;
-	padding: 70px 0;
+.how-text {
+    color: #1496d2;
+    font-family: Roboto;
+    font-size: 42px;
+    font-weight: 300;
+    line-height: 24.16px;
+    text-transform: uppercase;
 }
+
+.thumbnail {
+    border: 1px solid rgba(53, 52, 50, 0.3);
+    background-color: #ffffff;
+}
+
+.caption ol {
+    color: #353432;
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 300;
+}
+
 .why-choose-us {
-	background-image: url(images/black.jpg);
-	background-repeat: no-repeat;
-	background-position: bottom;
-	background-size: cover;
-	color: white;
+    background: url(images/black.jpg) no-repeat;
+    background-size: cover;
 }
-.transparent-choose{
-	background-color: rgba(255,255,255,0.2);
-	height: 100%;
+
+.transparent2 {
+    background-color: rgb(255, 255, 255, .2);
+    height: 100%;
+    padding: 100px 0;
 }
+
+.choose-text1 {
+    color: #ffc100;
+    font-family: Roboto;
+    font-size: 42px;
+    font-weight: 300;
+    line-height: 24.16px;
+    text-transform: uppercase;
+}
+
+.choose-text2 {
+    color: #ffc100;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24.16px;
+}
+
+.choose-text3 {
+    color: #ffffff;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24.16px;
+}
+
+.choose-text4 {
+    color: #ffffff;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24.16px;
+}
+
+.coache-text {
+    color: #1496d2;
+    font-family: Roboto;
+    font-size: 42px;
+    font-weight: 300;
+    line-height: 24.16px;
+    text-transform: uppercase;
+}
+
+.our-coaches-bg {
+    background: url(images/choache.png) no-repeat;
+    background-size: cover;
+    height: 248px;
+}
+
+.our-coaches-bg:hover .our-coaches-hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.our-coaches-hover {
+    opacity: 0;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: 1s;
+}
+
+padding: 100px 0;
+.our-coaches-hover p {
+    color: #ffc100;
+    font-family: Roboto;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 33px;
+    text-transform: uppercase;
+}
+
+
+/* 
+.how-it-works,
+.top,
+.why-choose-us, .our-coaches {
+    display: none;
+} */
