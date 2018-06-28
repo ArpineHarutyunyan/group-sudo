@@ -156,31 +156,37 @@
     background-size: cover;
     height: 248px;
 }
+
 .our-coaches-bg2 {
     background: url(images/choache2.jpg) no-repeat;
     background-size: cover;
     height: 248px;
 }
+
 .our-coaches-bg3 {
     background: url(images/choache5.jpg) no-repeat;
     background-size: cover;
     height: 248px;
 }
+
 .our-coaches-bg4 {
     background: url(images/choache4.png) no-repeat;
     background-size: cover;
     height: 248px;
 }
+
 .our-coaches-bg5 {
     background: url(images/choache5.jpg) no-repeat;
     background-size: cover;
     height: 248px;
 }
+
 .our-coaches-bg6 {
     background: url(images/choache6.jpg) no-repeat;
     background-size: cover;
     height: 248px;
 }
+
 .our-coaches-bg7 {
     background: url(images/choache7.jpg) no-repeat;
     background-size: cover;
@@ -192,7 +198,15 @@
     background-size: cover;
     height: 248px;
 }
-.our-coaches-bg:hover .our-coaches-hover {
+
+.our-coaches-bg1:hover .our-coaches-hover,
+.our-coaches-bg2:hover .our-coaches-hover,
+.our-coaches-bg3:hover .our-coaches-hover,
+.our-coaches-bg4:hover .our-coaches-hover,
+.our-coaches-bg5:hover .our-coaches-hover,
+.our-coaches-bg6:hover .our-coaches-hover,
+.our-coaches-bg7:hover .our-coaches-hover,
+.our-coaches-bg8:hover .our-coaches-hover {
     opacity: 1;
     cursor: pointer;
 }
@@ -279,6 +293,7 @@
 
 .gym-img img {
     vertical-align: text-top;
+    width: 100%;
 }
 
 .counters {
